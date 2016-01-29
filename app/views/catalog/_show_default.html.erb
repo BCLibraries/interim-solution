@@ -1,0 +1,19 @@
+<%# default partial to display solr document fields in catalog show view -%>
+<dl class="dl-horizontal  dl-invert">
+  <% document_show_fields(document).each do |field_name, field| -%>
+    <% if should_render_show_field? document, field %>
+	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+	    <dd class="blacklight-<%= field_name.parameterize %>">
+               <% if field_name=='mods_identifier_type_uri_ms' %>
+                       <a href=<%= render_document_show_field_value document,:field => field_name %> target="_blank">View Item in New Window</a>
+               <% elsif field_name=='mods_relatedItem_type_host_findingAid_ms' %>
+                       <a href=<%= render_document_show_field_value document,:field => field_name %> target="_blank">View Finding Aid </a>
+               <% else %>
+
+                      <%= render_document_show_field_value document,:field => field_name %>
+               <% end %>
+            </dd>
+    <% end -%>
+  <% end -%>
+</dl>
+<%# @document.inspect %>
