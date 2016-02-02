@@ -91,3 +91,9 @@
     top: -2px;
   }
 }
+
+.blacklight-catalog-show {
+  dd.blacklight-mods_titleinfo_usage_primary_title_ms, dt.blacklight-mods_titleinfo_usage_primary_title_ms {
+    display: none;
+  }
+}
