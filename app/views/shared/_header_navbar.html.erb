@@ -1,22 +1,46 @@
+<div class="navbar bc-navbar">
+  <div class="<%= container_classes %> bc-nav-container">
+    <div id="bcheader_info">
+    <ul>
+      <li><a href="http://www.bc.edu/gn-bcinfo" title="BCInfo">BCInfo</a></li>
+      <li><a href="http://www.bc.edu/gn-directories" title="Directories">Directories</a></li>
+    </ul>
+    <div id="bcheader_search">
+      <form action="//bc.edu/googlesearch/results.html" id="cse-search-box" _lpchecked="1">
+        <div>
+          <input type="hidden" name="cx" value="017979566303760088717:i5wjadpvu2w">
+          <input type="hidden" name="cof" value="FORID:11">
+          <input type="hidden" name="ie" value="UTF-8">
+          <label for="q"><span class="offscreen">Search BC</span></label>
+          <input type="text" value="Search BC" onblur="if(this.value=='') this.value='Search BC';" onclick="if(this.value=='Search BC') this.value='';" name="q" id="searchbox" size="27" autocomplete="off" style="background: rgb(255, 255, 255);">
+          <input type="button" id="searchsubmit" name="sa" value="Go" alt="search">
+        </div>
+        <input name="siteurl" type="hidden" value="library.bc.edu/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value="">
+      </form>
+      <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+    </div><!-- /Search -->
+    </div>
+  </div>
+</div>
 <div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="<%= container_classes %>">
     <div class="navbar-header">
-    <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <%= link_to application_name, root_path, class: "navbar-brand" %>
+      <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to application_name, root_path, class: "navbar-brand" %>
     </div>
 
     <div class="collapse navbar-collapse" id="user-util-collapse">
-      <%= render :partial=>'/user_util_links' %>
+      <%= render :partial => '/user_util_links' %>
     </div>
   </div>
 </div>
 <div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="<%= container_classes %>">
-    <%= render_search_bar  %>
+    <%= render_search_bar %>
   </div>
 </div>
