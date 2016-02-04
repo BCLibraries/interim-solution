@@ -31,6 +31,43 @@ class SolrDocument
   # single valued. See Blacklight::Document::SemanticFields#field_semantics
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
-  use_extension( Blacklight::Document::DublinCore)    
+  use_extension( Blacklight::Document::DublinCore)
+
+  def viewer_url
+    _source['mods_identifier_type_uri_ms'][0]
+  end
+
+  # Are there more images than just the thumbnail?
+  def more_images?
+    plurals_in_description? || has_id_range?
+  end
+
+  private
+
+  # Are there indicative plurals in the item description?
+  def plurals_in_description?
+    description = _source['mods_physicalDescription_extent_ms']
+    plurals = %w(negatives images surrogates)
+    if description.length > 0
+      description = description[0]
+    end
+    description =~ /#{plurals.join('|')}/
+  end
+
+  # Is there range of item identifiers or just one?
+  def has_id_range?
+    item_id_array = _source['mods_holdingSimple_copyInformation_itemIdentifier_type_local_ms']
+    if item_id_array.length > 0
+      item_id_strings = item_id_array[0].split('-')
+    else
+      item_id_strings = item_id_array.split('-')
+    end
+
+    if item_id_strings.length == 2
+      item_id_strings[1] != item_id_strings[0]
+    end
+
+    false
+  end
 
 end

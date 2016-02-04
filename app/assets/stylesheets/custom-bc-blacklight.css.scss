@@ -125,7 +125,7 @@
 
 @media (max-width: $screen-sm-max) {
   .blacklight-catalog-show {
-    .show-thumbnail {
+    .show-thumbnail, .document-thumbnail {
       float: none;
       margin: 1em 0;
     }

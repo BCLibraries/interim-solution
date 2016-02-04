@@ -1,11 +1,11 @@
 <%# default partial to display solr document fields in catalog show view -%>
 <%- if has_thumbnail?(document) %>
     <div class="show-thumbnail">
-      <a href="<%= document._source['mods_identifier_type_uri_ms'][0] %>" target="_blank">
+      <a href="<%= document.viewer_url %>" target="_blank">
         <%= image_tag thumbnail_url(document) %>
       </a>
       <div class="more-images">
-        <% if more_images?(document._source['mods_holdingSimple_copyInformation_itemIdentifier_type_local_ms'], document._source['mods_physicalDescription_extent_ms']) %>
+        <% if document.more_images? %>
             <a href="<%= document._source['mods_identifier_type_uri_ms'][0] %>" target="_blank">
               + more images
             </a>
