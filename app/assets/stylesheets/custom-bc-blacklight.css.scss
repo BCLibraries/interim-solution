@@ -1,3 +1,5 @@
+@import "icomoon";
+
 .offscreen {
   text-indent: -9999px;
   position: absolute;
@@ -138,4 +140,255 @@
     width: 100%;
   }
 
+}
+
+
+/* FOOTER */
+
+#footer {
+  background: #fff;
+  width: 1200px;
+  min-height: 285px;
+  overflow: auto;
+  padding: 10px 20px 0 20px;
+  margin: 8em auto 48px;
+  color: #666;
+}
+@media ( max-width: 1199px ) {
+  #footer {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.libhomepage #footer {
+  padding: 0 20px;
+}
+
+#footer h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 10px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#footer .nav > li > a {
+  display: inline-block;
+  padding: 0px;
+  position: relative;
+}
+
+#footer .nav > li > a:hover {
+  outline: 0px;
+}
+
+@media ( max-width: 768px ) {
+  #footer ul.nav {
+    display: none;
+  }
+  #footer nav select {
+    width: 95%;
+  }
+}
+
+#footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#footer li {
+  list-style: none;
+  margin: 0 -10px;
+  padding: 1px 0 0 10px;
+}
+
+.f_column {
+  width: 25%;
+  margin: 0px;
+  padding: 0 0 0 25px;
+  float: left;
+  border-right: 1px solid #DADADA;
+  min-height: 230px;
+  font-size: 13px;
+}
+
+@media ( max-width: 1050px ) {
+  .f_column {
+    width: 50%;
+    border-bottom: 1px solid #dadada;
+    margin: 0 0 15px 0;
+    min-height: 270px;
+  }
+}
+
+@media ( max-width: 768px ) {
+  .f_column {
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    margin: 0 0 15px 0;
+    min-height: 50px;
+  }
+}
+
+
+.column_hours {
+  border-right: 0px;
+  width: 50%;
+}
+@media ( max-width: 1050px ) {
+  .column_hours {
+    width: 100%;
+  }
+}
+
+#copyright {
+  padding: 0;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* SOCIAL MEDIA CSS */
+
+#socialmedia {
+  margin: 10px 0;
+}
+
+#socialmedia ul li {
+  display: inline-block;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0px 3px;
+}
+#socialmedia ul li:first-child {
+  padding: 0 3px 0 0;
+}
+
+.mediablock {
+  font-family: 'icomoon';
+  height: 40px;
+  width: 40px;
+  display: block;
+  background: #32758f;
+  text-align: center;
+  padding: 6px 0;
+  color: #fff !important;
+  font-size: 20px;
+  float: left;
+  border-bottom: 3px solid #05506d;
+}
+
+.mediablock:hover {
+  background: #05506d;
+  text-decoration: none;
+  border-bottom: 2px solid #04394e;
+}
+
+#media_news:after {
+  content: "\e684";
+}
+
+#media_facebook:after {
+  content: "\e63f";
+}
+
+#media_flickr:after {
+  content: "\e641";
+}
+
+#media_twitter:after {
+  content: "\e640";
+}
+
+#media_youtube:after {
+  content: "\e645";
+}
+
+/* Hours */
+
+.mini_hours_container,
+#oconnor_hours_container {
+  /* background: url("/theme/img/megabutton_time.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;*/
+  font-size: 15px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.mini_hours_container:before,
+#oconnor_hours_container:before {
+  font-family: "icomoon";
+  content: "\e647";
+  color: #05506d;
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+.mini_hours_container:hover:before,
+#oconnor_hours_container:hover:before {
+  color: #32758f;
+}
+
+.mini_hours_container ul.lib_hours li.name,
+.mini_hours_container ul.lib_hours li.day,
+.mini_hours_container ul.lib_hours li.date {
+  display: none;
+}
+
+.mini_hours_container ul.lib_hours li.status,
+.mini_hours_container ul.lib_hours li.hours {
+  display: inline-block;
+}
+
+.mini_hours_container ul.lib_hours li.status {
+  text-transform: capitalize;
+}
+
+.mini_hours_container ul.lib_hours li.status:after {
+  content: "\00A0";
+}
+
+#oconnor_hours_row ul.lib_hours,
+#all_hours_container ul.lib_hours {
+  padding: 2px 0;
+}
+
+#all_hours_container ul.lib_hours:nth-child(odd) {
+  background-color: #EAEAEA;
+}
+
+#all_hours_container ul.lib_hours li.day,
+#all_hours_container ul.lib_hours li.date {
+  display: none;
+}
+
+#oconnor_hours_row ul.lib_hours li,
+#all_hours_container ul.lib_hours li.status,
+#all_hours_container ul.lib_hours li.name,
+#all_hours_container ul.lib_hours li.hours {
+  display: inline-block;
+  margin: 0;
+  padding: 1px 0 1px 4px;
+  width: 40%;
+  vertical-align: middle;
+}
+
+#oconnor_hours_row ul.lib_hours li.hours {
+  width: 60%;
+}
+
+#all_hours_container ul.lib_hours li.status {
+  width: 20%;
+}
+
+.accessibility-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
