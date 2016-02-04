@@ -11,7 +11,7 @@
   background: #790009 no-repeat 100% 0%;
   border-radius: 0;
   min-height: 45px;
-  
+
   .bc-nav-container {
     background: url("http://library.bc.edu/theme/img/bcheader_title.png") no-repeat;
   }
@@ -21,7 +21,17 @@
   background: none;
   min-height: 45px;
   height: 45px;
+  text-indent: 0;
   border-radius: 0;
+  width: 100%;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #433333;
+  &:hover {
+    color: black;
+  }
+
 }
 
 #bcheader_info {
@@ -96,4 +106,36 @@
   dd.blacklight-mods_titleinfo_usage_primary_title_ms, dt.blacklight-mods_titleinfo_usage_primary_title_ms {
     display: none;
   }
+
+  .show-thumbnail {
+    float: right;
+
+    img {
+      max-width: 450px;
+    }
+  }
+}
+
+.more-images {
+  font-size: 12px;
+  text-align: right;
+}
+
+@media (max-width: $screen-sm-max) {
+  .blacklight-catalog-show {
+    .show-thumbnail {
+      float: none;
+      margin: 1em 0;
+    }
+  }
+
+  #bcheader_info {
+    display: none;
+  }
+
+  .navbar.bc-navbar .bc-nav-container {
+    height: 45px;
+    width: 100%;
+  }
+
 }

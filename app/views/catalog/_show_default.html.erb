@@ -1,4 +1,18 @@
 <%# default partial to display solr document fields in catalog show view -%>
+<%- if has_thumbnail?(document) %>
+    <div class="show-thumbnail">
+      <a href="<%= document._source['mods_identifier_type_uri_ms'][0] %>" target="_blank">
+        <%= image_tag thumbnail_url(document) %>
+      </a>
+      <div class="more-images">
+        <% if more_images?(document._source['mods_holdingSimple_copyInformation_itemIdentifier_type_local_ms'], document._source['mods_physicalDescription_extent_ms']) %>
+            <a href="<%= document._source['mods_identifier_type_uri_ms'][0] %>" target="_blank">
+              + more images
+            </a>
+      <% end %>
+      </div>
+    </div>
+<%- end %>
 <dl class="dl-horizontal  dl-invert">
   <% document_show_fields(document).each do |field_name, field| -%>
     <% if should_render_show_field? document, field %>
