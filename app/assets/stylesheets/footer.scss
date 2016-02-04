@@ -1,153 +1,5 @@
-@import "icomoon";
-
-.offscreen {
-  text-indent: -9999px;
-  position: absolute;
-}
-
-.navbar {
-  background-color: #fff;
-}
-
-.navbar.bc-navbar {
-  background: #790009 no-repeat 100% 0%;
-  border-radius: 0;
-  min-height: 45px;
-
-  .bc-nav-container {
-    background: url("http://library.bc.edu/theme/img/bcheader_title.png") no-repeat;
-  }
-}
-
-#header-navbar .navbar-brand {
-  background: none;
-  min-height: 45px;
-  height: 45px;
-  text-indent: 0;
-  border-radius: 0;
-  width: 100%;
-}
-
-.navbar-inverse .navbar-brand {
-  color: #433333;
-  &:hover {
-    color: black;
-  }
-
-}
-
-#bcheader_info {
-  width: 460px;
-  float: right;
-  height: 45px;
-  overflow: hidden;
-  padding: 15px 0;
-
-  a {
-    color: #fff;
-    text-transform: uppercase;
-  }
-
-  ul {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 2px;
-    padding: 0 0 0 30px;
-
-    li {
-      display: inline-block;
-      list-style: none outside none;
-      margin: 0;
-      padding: 0px 5px;
-    }
-  }
-}
-
-#bcheader_search {
-  width: 253px;
-  margin: 0;
-  position: relative;
-  top: -3px;
-  float: right;
-
-  #searchsubmit {
-    width: 40px;
-    height: 20px;
-    display: block;
-    position: relative;
-    float: right;
-    padding: 0;
-    margin: 0;
-    line-height: 1px;
-    text-align: center;
-    cursor: pointer;
-    border: 0px solid #B29D6C;
-    outline: none;
-    color: #FFF;
-    background: #B29D6C none repeat scroll 0% 0%;
-    border-bottom: 2px solid #9A885D;
-    z-index: 90;
-    font-size: 14px;
-  }
-
-  #searchbox {
-    border: 0px solid #B29D6C !important;
-    outline: none;
-    background: #fff;
-    width: 200px;
-    height: 20px;
-    margin: 0;
-    font-size: 12px;
-    color: #666;
-    position: relative;
-    top: -2px;
-  }
-}
-
-.blacklight-catalog-show {
-  dd.blacklight-mods_titleinfo_usage_primary_title_ms, dt.blacklight-mods_titleinfo_usage_primary_title_ms {
-    display: none;
-  }
-
-  .show-thumbnail {
-    float: right;
-
-    img {
-      max-width: 450px;
-    }
-  }
-}
-
-.more-images {
-  font-size: 12px;
-  text-align: right;
-}
-
-@media (max-width: $screen-sm-max) {
-  .blacklight-catalog-show {
-    .show-thumbnail, .document-thumbnail {
-      float: none;
-      margin: 1em 0;
-    }
-  }
-
-  #bcheader_info {
-    display: none;
-  }
-
-  .navbar.bc-navbar .bc-nav-container {
-    height: 45px;
-    width: 100%;
-  }
-
-}
-
-
-.document-thumbnail img {
-  max-width: 400px;
-}
-
-/* FOOTER */
+/* BC Footer CSS */
+/* Taken directly from home page. No modifications. */
 
 #footer {
   background: #fff;
@@ -158,7 +10,8 @@
   margin: 8em auto 48px;
   color: #666;
 }
-@media ( max-width: 1199px ) {
+
+@media (max-width: 1199px) {
   #footer {
     width: 100%;
     padding: 0px;
@@ -187,7 +40,7 @@
   outline: 0px;
 }
 
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
   #footer ul.nav {
     display: none;
   }
@@ -217,7 +70,7 @@
   font-size: 13px;
 }
 
-@media ( max-width: 1050px ) {
+@media (max-width: 1050px) {
   .f_column {
     width: 50%;
     border-bottom: 1px solid #dadada;
@@ -226,7 +79,7 @@
   }
 }
 
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
   .f_column {
     width: 100%;
     border-bottom: 1px solid #dadada;
@@ -235,12 +88,12 @@
   }
 }
 
-
 .column_hours {
   border-right: 0px;
   width: 50%;
 }
-@media ( max-width: 1050px ) {
+
+@media (max-width: 1050px) {
   .column_hours {
     width: 100%;
   }
@@ -265,6 +118,7 @@
   margin: 0;
   padding: 0px 3px;
 }
+
 #socialmedia ul li:first-child {
   padding: 0 3px 0 0;
 }
@@ -386,13 +240,4 @@
 
 #all_hours_container ul.lib_hours li.status {
   width: 20%;
-}
-
-.accessibility-text {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }

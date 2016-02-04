@@ -1,0 +1,30 @@
+/* CSS for the full display page ("show" template) */
+
+.blacklight-catalog-show {
+  dd.blacklight-mods_titleinfo_usage_primary_title_ms, dt.blacklight-mods_titleinfo_usage_primary_title_ms {
+    display: none;
+  }
+
+  .show-thumbnail {
+    float: right;
+    margin: 0 0 1em 1em;
+
+    img {
+      max-width: 450px;
+    }
+  }
+}
+
+.more-images {
+  font-size: 12px;
+  text-align: right;
+}
+
+@media (max-width: $screen-sm-max) {
+  .blacklight-catalog-show {
+    .show-thumbnail, .document-thumbnail {
+      float: none;
+      margin: 1em 0;
+    }
+  }
+}

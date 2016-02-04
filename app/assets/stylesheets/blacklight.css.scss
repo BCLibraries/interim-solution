@@ -1,11 +1,13 @@
+/* Fonts from Google */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700);
 
+/* Needed for Bootstrap */
 @import 'bootstrap-sprockets';
-
 @import 'variables';
-
 @import 'bootstrap';
 
+/* Blacklight built-in styles */
 @import 'blacklight/blacklight';
 
+/* BC Blacklight customizations */
 @import 'custom-bc-blacklight';
