@@ -240,4 +240,9 @@ class CatalogController < ApplicationController
   end
 CatalogController.blacklight_config.show.document_actions.delete(:sms)
 
+  # Disable user authentication
+  def has_user_authentication_provider?
+    false
+  end
+
 end 

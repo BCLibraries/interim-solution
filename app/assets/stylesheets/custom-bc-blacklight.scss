@@ -5,3 +5,8 @@
 @import "footer";
 @import "full-display";
 @import "brief-display";
+
+// HIDDEN FUNCTIONALITY
+form.bookmark_toggle.form-horizontal {
+  display: none;
+}
