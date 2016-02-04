@@ -54,6 +54,10 @@ GEM
       blacklight (~> 5.10)
       marc (>= 0.4.3, < 1.1)
       rails
+    blacklight_range_limit (5.2.0)
+      blacklight (~> 5.15)
+      jquery-rails
+      rails (>= 3.0, < 5.0)
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
@@ -198,6 +202,7 @@ PLATFORMS
 DEPENDENCIES
   blacklight (>= 5.3.0)
   blacklight-marc (~> 5.0)
+  blacklight_range_limit
   byebug
   coffee-rails (~> 4.1.0)
   devise

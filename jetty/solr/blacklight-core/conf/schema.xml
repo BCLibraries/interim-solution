@@ -533,7 +533,7 @@
    <field name="mods_keydate_sort" type="tint" indexed="true" stored="true" multiValued="false"/>
      
    <!-- format is used for facet, display, and choosing which partial to use for the show view, so it must be stored and indexed -->
-   <!--field name="format" type="string" indexed="true" stored="true"/-->
+   <field name="format" type="string" indexed="true" stored="true"/>
    <field name="mods_genre_normalized_ms" type="string" indexed="true" stored="true" multiValued="true"/>   
 
    <field name="mods_relatedItem_type_host_displayForm_ms" type="string" indexed="true" stored="true"/>

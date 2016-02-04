@@ -35,12 +35,16 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.title_field = 'mods_titleInfo_usage_primary_title_ms'
-    config.index.display_type_field = 'format'
+    #config.index.display_type_field = 'format'
+    config.index.display_type_field = 'mods_format_normalized_ms'
     
 
     # solr field configuration for document/show views
     #config.show.title_field = 'title_display'
     #config.show.display_type_field = 'format'
+    config.show.title_field = 'mods_titleInfo_usage_primary_title_ms'
+    config.show.display_type_field = 'mods_format_normalized_ms'
+
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -69,13 +73,14 @@ class CatalogController < ApplicationController
     config.add_facet_field 'mods_subject_ms', :label => 'Subject', limit: 7
     config.add_facet_field 'mods_places_ms', :label => 'Place', limit: 7
     config.add_facet_field 'mods_date_facet_ms', :label => 'Date', limit: 7
-    config.add_facet_field 'mods_era_facet_ms', :label => 'Date Range', limit: 7
+    config.add_facet_field 'mods_originInfo_dateCreated_encoding_w3cdtf_keyDate_yes_ms', :label => 'Date Range', range: true
+    #config.add_facet_field 'mods_era_facet_ms', :label => 'Date Range', limit: 7
 
-   # config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
-   #    :years_5 => { :label => 'within 5 Years', :fq => "pub_date:[#{Time.now.year - 5 } TO *]" },
-   #    :years_10 => { :label => 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
-   #    :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
-   # }
+    #config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
+    #   :years_5 => { :label => 'within 5 Years', :fq => "mods_date_facet_ms:[#{Time.now.year - 5 } TO *]" },
+    #   :years_10 => { :label => 'within 10 Years', :fq => "mods_date_facet_ms:[#{Time.now.year - 10 } TO *]" },
+    #   :years_25 => { :label => 'within 25 Years', :fq => "mods_date_facet_ms:[#{Time.now.year - 25 } TO *]" }
+    #}
 
 
     # Have BL send all facet field names to Solr, which has been the default
