@@ -37,6 +37,14 @@ class SolrDocument
     _source['mods_identifier_type_uri_ms'][0]
   end
 
+  def has_finding_aid?
+    ! _source['mods_relatedItem_type_host_findingAid_ms'].blank?
+  end
+
+  def finding_aid_url
+    _source['mods_relatedItem_type_host_findingAid_ms'][0]
+  end
+
   # Are there more images than just the thumbnail?
   def more_images?
     plurals_in_description? || has_id_range?

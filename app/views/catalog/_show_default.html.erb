@@ -4,30 +4,39 @@
       <a href="<%= document.viewer_url %>" target="_blank">
         <%= image_tag thumbnail_url(document) %>
       </a>
-      <div class="more-images">
-        <% if document.more_images? %>
-            <a href="<%= document._source['mods_identifier_type_uri_ms'][0] %>" target="_blank">
+      <% if document.more_images? %>
+          <div class="more-images">
+            <a href="<%= document.viewer_url%>" target="_blank">
               + more images
             </a>
+          </div>
       <% end %>
-      </div>
+      <% if document.has_finding_aid? %>
+          <div class="to-finding-aid">
+            <a href="<%= document.finding_aid_url %>" target="_blank">
+              finding aid
+            </a>
+          </div>
+      <% end %>
     </div>
 <%- end %>
 <dl class="dl-horizontal  dl-invert">
   <% document_show_fields(document).each do |field_name, field| -%>
-    <% if should_render_show_field? document, field %>
-	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
-	    <dd class="blacklight-<%= field_name.parameterize %>">
-               <% if field_name=='mods_identifier_type_uri_ms' %>
-                       <a href=<%= render_document_show_field_value document,:field => field_name %> target="_blank">View Item in New Window</a>
-               <% elsif field_name=='mods_relatedItem_type_host_findingAid_ms' %>
-                       <a href=<%= render_document_show_field_value document,:field => field_name %> target="_blank">View Finding Aid </a>
-               <% else %>
+      <% if should_render_show_field? document, field %>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>">
+            <% if field_name=='mods_identifier_type_uri_ms' %>
+                <a href=<%= render_document_show_field_value document, :field => field_name %> target="_blank">View Item
+                  in New Window</a>
+            <% elsif field_name=='mods_relatedItem_type_host_findingAid_ms' %>
+                <a href=<%= render_document_show_field_value document, :field => field_name %> target="_blank">View
+                  Finding Aid </a>
+            <% else %>
 
-                      <%= render_document_show_field_value document,:field => field_name %>
-               <% end %>
-            </dd>
-    <% end -%>
+                <%= render_document_show_field_value document, :field => field_name %>
+            <% end %>
+          </dd>
+      <% end -%>
   <% end -%>
 </dl>
 <%# @document.inspect %>
