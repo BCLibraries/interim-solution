@@ -504,9 +504,9 @@
    <field name="text" type="text" indexed="true" stored="false" multiValued="true"/>
    
    <!-- these display fields are NOT multi-valued -->
-   <!--field name="marc_display" type="string" indexed="false" stored="true" multiValued="false"/>
+   <field name="marc_display" type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="title_display" type="string" indexed="false" stored="true" multiValued="false"/>
-   <field name="mods_titleInfo_usage_primary_title_ms" type="string" indexed="true" stored="true" multiValued="false"/>
+   <!--field name="mods_titleInfo_usage_primary_title_ms" type="string" indexed="true" stored="true" multiValued="false"/>
    <field name="title_vern_display" type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="subtitle_display" type="string" indexed="false" stored="true" multiValued="false"/>
    <field name="subtitle_vern_display" type="string" indexed="false" stored="true" multiValued="false"/>
@@ -652,6 +652,10 @@
    <copyField source="mods_name_usage_primary_displayForm_aut_mt" dest="mods_name_usage_primary_sort"/>
    <copyField source="mods_name_usage_primary_displayForm_cre_mt" dest="mods_name_usage_primary_sort"/>
    <copyField source="mods_name_usage_primary_displayForm_pht_mt" dest="mods_name_usage_primary_sort"/>
+
+   <!-- cite fields -->
+   <copyField source="mods_titleInfo_usage_primary_title_ms" dest="title_display"/>
+   <copyField source="mods_name_usage_primary_displayform_pht_ms" dest="author_display"/>
 
         
    <!-- spellcheck fields -->

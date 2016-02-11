@@ -15,6 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+*.log.*
 *.log
 
 /vendor
+
+# Ignore any vim swap files
+*.swp

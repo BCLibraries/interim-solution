@@ -73,7 +73,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'mods_subject_ms', :label => 'Subject', limit: 7
     config.add_facet_field 'mods_places_ms', :label => 'Place', limit: 7
     config.add_facet_field 'mods_date_facet_ms', :label => 'Date', limit: 7
-    config.add_facet_field 'mods_originInfo_dateCreated_encoding_w3cdtf_keyDate_yes_ms', :label => 'Date Range', range: true
+    #config.add_facet_field 'mods_originInfo_dateCreated_encoding_w3cdtf_keyDate_yes_ms', :label => 'Date Range', range: true
     #config.add_facet_field 'mods_era_facet_ms', :label => 'Date Range', limit: 7
 
     #config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
