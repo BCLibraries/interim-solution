@@ -1,11 +1,25 @@
 /* CSS for the BC header */
 
+.navbar.bc-navbar {
+  background: #790009 no-repeat 100% 0%;
+  border-radius: 0;
+  min-height: 10px;
+  height: 32px;
+  margin-bottom: 0;
+
+  .bc-nav-container {
+    background: url("http://library.bc.edu/theme/img/bcheader_title.png") no-repeat 0 3px;
+    background-size: 150px;
+  }
+}
+
+
 #bcheader_info {
   width: 460px;
   float: right;
-  height: 45px;
   overflow: hidden;
-  padding: 15px 0;
+  padding: 5px 0;
+  height: 28px;
 
   a {
     color: #fff;
