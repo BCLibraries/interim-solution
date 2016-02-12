@@ -1,143 +1,29 @@
-<!--div class="page-header row">
-  <h1 class="col-md-8 page-heading"><%= t('blacklight.welcome') %></h1>
-</div-->
+<div class="front-page">
+  <div class="row">
 
-    <div class="table">
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Abstract+of+a+cruise+in+the+frigate+United+States+under+the+command+of+Commandore+Thos+ap+Catesby+Jones%2C+James+Armstrong+esq.+Captain+in+the+South+Pacific">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Abstract of a cruise in the frigate United States under the command of Commandore Thos ap Catesby Jones, James Armstrong esq. Captain in the South Pacific"/></a><div class="caption">Abstract of a cruise in the frigate United State</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collection_ms%5D%5B%5D=Bobbie+Hanvey+Photographic+Archives">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Bobbie Hanvey Photographic Archives"/></a><div class="caption">Bobbie Hanvey Photographic Archives</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Book+of+hours">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Book of hours"/></a><div class="caption">Book of hours</div>
-            </div>
+    <%# List of collections from CollectionHelper  %>
+    <% highlighted_collections.each do |collection| %>
+        <div class="col-md-4 col-sm-6">
+          <figure>
+            <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=<%= collection[:facet_val] %>">
+              <img src="<%= collection[:img] %>" alt="<%= collection[:title] %>"/></a>
+            <figcaption class="caption">
+              <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=<%= collection[:facet_val] %>">
+                <%= collection[:title] %>
+              </a></figcaption>
+          </figure>
         </div>
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+athletic+photographs">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College athletic photographs"/></a><div class="caption">Boston College athletic photographs</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+building+and+campus+images">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College building and campus images"/></a><div class="caption">Boston College building and campus images</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+Commencement+photographs">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College Commencement photographs"/></a><div class="caption">Boston College Commencement photographs</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+Evening+College+photographs+%28early+years%29">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College Evening College photographs (early years)"/></a><div class="caption">Boston College Evening College photographs (early years)</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+faculty+and+staff+photographs">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College faculty and staff photographs"/></a><div class="caption">Boston College faculty and staff photographs</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+special+guests+and+events+photographs">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College special guests and events photographs"/></a><p class="caption">Boston College special guests and events photographs</p>
-            </div>
-        </div>  
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+students+and+campus+life+photographs">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College students and campus life photographs"/></a><div class="caption">Boston College students and campus life photographs</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Boston+College+theater+productions">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Boston College theater productions"/></a><div class="caption">Boston College theater productions</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Charter+of+Boston+College+and+amendments">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Charter of Boston College and amendments"/></a><div class="caption">Charter of Boston College and amendments</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=%5BConnolly+book+of+hours%5D">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="[Connolly book of hours]"/></a><div class="caption">[Connolly book of hours]</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Elizabeth+Capell+recipe+book">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Elizabeth Capell recipe book"/></a><div class="caption">Elizabeth Capell recipe book</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Elizabeth+Hayward+collection+of+Ursuline+Academy+materials">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Elizabeth Hayward collection of Ursuline Academy materials"/></a><div class="caption">Elizabeth Hayward collection of Ursuline Academy materials</div>
-            </div>
-        </div>     
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Francis+Borgia+letter%2C+1557+November+1">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Francis Borgia letter, 1557 November 1"/></a><div class="caption">Francis Borgia letter, 1557 November 1</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Francis+Xavier+letter%2C+1552+January+31">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Francis Xavier letter, 1552 January 31"/></a><div class="caption">Francis Xavier letter, 1552 January 31</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Franciscan+antiphoner+%28sanctorale%29+with+sequences%2C+circa+1300-1350">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Franciscan+antiphoner+sanctorale+with+sequences+circa+1300-1350"/></a><div class="caption">Franciscan antiphoner sanctorale with sequences irca 1300-1350</div>
-            </div>
-        </div>    
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=James+Jeffrey+Roche+letters">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="James Jeffrey Roche letters"/></a><div class="caption">James Jeffrey Roche letters</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=John+Donnelly+%26+Sons+records">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="John Donnelly &amp; Sons records"/></a><div class="caption">John Donnelly &amp; Sons records</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Letter%2C+1798+June+8">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Letter, 1798 June 8"/></a><div class="caption">Letter, 1798 June 8</div>
-            </div>
-        </div>  
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Mariana+Islands+letters">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Mariana Islands letters"/></a><div class="caption">Mariana Islands letters</div>
-            </div> 
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Michael+H.+Leary+letters">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Michael H. Leary letters"/></a><div class="caption">Michael H. Leary letters</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Robert+Bellarmine+letter%2C+1598+February+5">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Robert Bellarmine letter, 1598 February 5"/></a><div class="caption">Robert Bellarmine letter, 1598 February 5</div>
-            </div>
-        </div>               
-        <div class="row">
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=The+Robert+E.+Brooker+III+Collection+of+American+Legal+and+Land+Use+Documents%2C+1716-1930">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="The Robert E. Brooker III Collection of American Legal and Land Use Documents, 1716-1930"/></a><div class="caption">The Robert E. Brooker III Collection of American Legal and Land Use Documents, 1716-1930</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=Thomas+D.+Craven+papers">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="Thomas D. Craven papers"/></a><div class="caption">Thomas D. Craven papers</div>
-            </div>
-            <div class="cell">
-                <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=William+Butler+Yeats+notebooks+and+manuscripts">
-                    <img src="http://dcollections.bc.edu/webclient/DeliveryManager?pid=508255" alt="William Butler Yeats notebooks and manuscripts"/></a><div class="caption">William Butler Yeats notebooks and manuscripts</div>
-            </div> 
-        </div>
-    </div>
+    <% end %>
+  </div>
+</div>
 
 <script>
-  $(function() {
-    $('#about a').on('click', function(e) {
+  $(function () {
+    $('#about a').on('click', function (e) {
       e.preventDefault();
 
       if ($('#about-content').html() == "") {
-        $('#about-content').load($(this).attr("href"), function() {
+        $('#about-content').load($(this).attr("href"), function () {
           $('#about-content').show();
         });
       } else {
