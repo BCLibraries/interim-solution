@@ -9,7 +9,6 @@
     padding-left: 0;
   }
 
-
   .libraries-logo {
     width: 143px;
     float: left;
@@ -20,17 +19,17 @@
     }
   }
 
-
   .app-name {
     float: left;
     padding: 0px 0 0 40px;
     height: 52px;
+    margin-top: 5px;
 
     .navbar-brand {
       background: none;
       text-indent: 0;
       width: 100%;
-      font-size: 36px;
+      font-size: 42px;
     }
   }
 
@@ -41,11 +40,23 @@
   margin-top: 1em
 }
 
-
-
 @media (max-width: $screen-sm-max) {
   .navbar.bc-navbar .bc-nav-container {
     height: 45px;
     width: 100%;
   }
+
+  #header-navbar {
+    .app-name {
+      margin-top: 9px;
+
+      .navbar-brand {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.navbar-default {
+  background-color: rgba(215, 151, 19, 0.75);
 }
