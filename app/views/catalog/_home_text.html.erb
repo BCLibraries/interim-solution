@@ -1,19 +1,18 @@
 <div class="front-page">
   <div class="row">
 
-    <%# List of collections from CollectionHelper  %>
+    <%# List of collections is from CollectionHelper  %>
     <% highlighted_collections.each do |collection| %>
         <div class="col-md-4 col-sm-6">
-          <figure>
-            <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=<%= collection[:facet_val] %>">
-              <img src="<%= collection[:img] %>" alt="<%= collection[:title] %>"/></a>
-            <figcaption class="caption">
-              <a href="/?f%5Bmods_relatedItem_type_host_collectionFacet_ms%5D%5B%5D=<%= collection[:facet_val] %>">
-                <%= collection[:title] %>
-              </a></figcaption>
+          <figure class="collection-cover">
+            <%= image_link_to_collection collection %>
+            <figcaption>
+              <%= text_link_to_collection collection %>
+            </figcaption>
           </figure>
         </div>
     <% end %>
+
   </div>
 </div>
 

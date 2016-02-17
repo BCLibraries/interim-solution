@@ -22,3 +22,7 @@
 
 # Ignore any vim swap files
 *.swp
+
+# Ignore cover images except for default.
+/app/assets/images/cover-images/*.jpg
+!/app/assets/images/cover-images/default-cover-01.jpg
