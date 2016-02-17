@@ -1,4 +1,10 @@
 .front-page {
+
+  .cover-box {
+    @extend .col-md-4;
+    @extend .col-sm-6;
+  }
+
   figure {
     display: block;
     margin: 0 auto 2em auto;
