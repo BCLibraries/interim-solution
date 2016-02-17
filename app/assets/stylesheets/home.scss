@@ -1,25 +1,48 @@
+/** Convoluted SCSS to make images of different sizes and shape square and even. */
 .front-page {
-
   .cover-box {
     @extend .col-md-4;
     @extend .col-sm-6;
+    margin-bottom: 2em;
+    overflow: hidden;
   }
 
   figure {
+    $cover-image-border-radius: 4px;
+
     display: block;
     margin: 0 auto 2em auto;
-    width: 100%;
-    min-height: 320px;
-    //border: 1px dotted gray;
-    padding: 5px;
+    height: 200px;
+    padding: 0 0 0 1em;
 
     img {
-      width: 100%;
       border-radius: 3px;
+      position: absolute;
+      border-radius: $cover-image-border-radius;
+    }
+
+    img.landscape {
+      top: 0;
+      height: 100%;
+    }
+
+    img.portrait {
+      top: 0;
+      width: 90%;
     }
 
     figcaption {
-      margin: .5em .25em .5em .25em;
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+      width: 90%;
+      padding: 1.25em 1em .5em .5em;
+      border-radius: $cover-image-border-radius;
+
+      a, a:hover, a:active {
+        color: #fff;
+        text-decoration: none;
+      }
     }
   }
 }

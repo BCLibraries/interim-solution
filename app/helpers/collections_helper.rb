@@ -20,7 +20,7 @@ module CollectionsHelper
 
   def image_link_to_collection(collection)
     url = collection_url collection
-    image = image_tag collection['img'], alt: collection['title']
+    image = image_tag collection['img'], alt: collection['title'], class: collection['layout']
     link_to image, url
   end
 
