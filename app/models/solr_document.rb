@@ -54,7 +54,7 @@ class SolrDocument
   # Are there indicative plurals in the item description?
   def plurals_in_description?
     description = _source['mods_physicalDescription_extent_ms']
-    plurals = %w(negatives images surrogates)
+    plurals = %w(negatives images surrogates leaves)
     if description.length > 0
       description = description[0]
     end
@@ -63,6 +63,14 @@ class SolrDocument
 
   # Is there range of item identifiers or just one?
   def has_id_range?
+    if _source['mods_holdingSimple_copyInformation_itemIdentifier_type_local_ms']
+      id_range_has_multiple_ids?
+    else
+      false
+    end
+  end
+
+  def id_range_has_multiple_ids?
     item_id_array = _source['mods_holdingSimple_copyInformation_itemIdentifier_type_local_ms']
     if item_id_array.length > 0
       item_id_strings = item_id_array[0].split('-')
@@ -75,7 +83,6 @@ class SolrDocument
     else
       false
     end
-
   end
 
 end
