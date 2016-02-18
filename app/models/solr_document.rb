@@ -54,7 +54,7 @@ class SolrDocument
   # Are there indicative plurals in the item description?
   def plurals_in_description?
     description = _source['mods_physicalDescription_extent_ms']
-    plurals = %w(negatives images surrogates leaves)
+    plurals = %w(negatives images surrogates leaves pages letter manuscript)
     if description.length > 0
       description = description[0]
     end
