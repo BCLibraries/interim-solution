@@ -7,14 +7,20 @@
       <% if document.more_images? %>
           <div class="more-images">
             <a href="<%= document.viewer_url%>" target="_blank">
-              + more images
+              Click for more images
+            </a>
+          </div>
+      <% else %>
+          <div class="more-images">
+            <a href="<%= document.viewer_url%>" target="_blank">
+              Click for larger image
             </a>
           </div>
       <% end %>
       <% if document.has_finding_aid? %>
           <div class="to-finding-aid">
             <a href="<%= document.finding_aid_url %>" target="_blank">
-              finding aid
+              Click for Finding Aid
             </a>
           </div>
       <% end %>

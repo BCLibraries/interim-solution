@@ -1,8 +1,14 @@
 [
   {
     "facet_val": "Abstract+of+a+cruise+in+the+frigate+United+States+under+the+command+of+Commandore+Thos+ap+Catesby+Jones%2C+James+Armstrong+esq.+Captain+in+the+South+Pacific",
-    "title": "Abstract of a cruise in the frigate United State",
+    "title": "Abstract of a cruise in the frigate United States",
     "img": "cover-images/MS1986_017_cover.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "The+Becker+Collection",
+    "title": "The Becker Collection",
+    "img": "cover-images/CW-AL-WDC-ND_cover.jpg",
     "layout": "portrait"
   },
   {
@@ -14,7 +20,7 @@
   {
     "facet_val": "Book+of+hours",
     "title": "Book of Hours",
-    "img": "cover-images/MS1986_093_cover.jpg",
+    "img": "cover-images/MS1986_093_cover_cropped.jpg",
     "layout": "portrait"
   },
   {
@@ -27,7 +33,7 @@
     "facet_val": "Boston+College+athletic+photographs",
     "title": "Boston College athletic photographs",
     "img": "cover-images/BC1986_019_cover.jpg",
-    "layout": "landscape"
+    "layout": "portrait"
   },
   {
     "facet_val": "Boston+College+building+and+campus+images",
@@ -50,7 +56,7 @@
   {
     "facet_val": "Boston+College+faculty+and+staff+photographs",
     "title": "Boston College faculty and staff photographs",
-    "img": "cover-images/BC2000_005_cover.jpg",
+    "img": "cover-images/BC2000_005_cover_cropped.jpg",
     "layout": "portrait"
   },
   {
@@ -66,9 +72,15 @@
     "layout": "landscape"
   },
   {
+    "facet_val": "Boston+Gas+Company",
+    "title": "Boston Gas Company Phototgraphs",
+    "img": "cover-images/BC000001319_cover.jpg",
+    "layout": "landscape"
+  },
+  {
     "facet_val": "Charter+of+Boston+College+and+amendments",
     "title": "Charter of Boston College and amendments",
-    "img": "cover-images/BC2004_133_cover.jpg",
+    "img": "cover-images/BC2004_133_cover_cropped.jpg",
     "layout": "portrait"
   },
   {
@@ -103,7 +115,7 @@
   },
   {
     "facet_val": "Franciscan+antiphoner+%28sanctorale%29+with+sequences%2C+circa+1300-1350",
-    "title": "Franciscan antiphoner sanctorale with sequences irca 1300-1350",
+    "title": "Franciscan antiphoner sanctorale with sequences circa 1300-1350",
     "img": "cover-images/MS1996_097_cover.jpg",
     "layout": "portrait"
   },
@@ -122,13 +134,19 @@
   {
     "facet_val": "Letter%2C+1798+June+8",
     "title": "Letter, 1798 June 8",
-    "img": "cover-images/MS2001_041_cover.jpg",
+    "img": "cover-images/MS2001_041_cover_cropped.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "Liturgy+and+life+collection",
+    "title": "Liturgy and Life Artifacts Collection",
+    "img": "cover-images/BC000000943_cover.jpg",
     "layout": "portrait"
   },
   {
     "facet_val": "Mariana+Islands+letters",
     "title": "Mariana Islands letters",
-    "img": "cover-images/MS2004_068_cover.jpg",
+    "img": "cover-images/MS2004_068_cover_cropped.jpg",
     "layout": "portrait"
   },
   {
@@ -153,6 +171,12 @@
     "facet_val": "Thomas+D.+Craven+papers",
     "title": "Thomas D. Craven papers",
     "img": "cover-images/BC2004_121_cover.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "Thomas+P.+O%27Neill%2C+Jr.+Photographs",
+    "title": "Thomas P. O'Neill, Jr., Photographs",
+    "img": "cover-images/BC000000021_cover.jpg",
     "layout": "portrait"
   },
   {
