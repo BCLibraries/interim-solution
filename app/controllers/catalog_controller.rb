@@ -66,6 +66,7 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
     config.add_facet_field 'mods_relatedItem_type_host_collectionFacet_ms', :label => 'Collection/Series', limit: 10
+    config.add_facet_field 'mods_relatedItem_type_host_collection_ms', :label => 'Collection/Series', :show => false
 #config.add_facet_field 'a_pivot_facet', pivot: ['mods_relatedItem_type_host_series_displayForm_ms', 'mods_relatedItem_type_host_series_ms']
 
 

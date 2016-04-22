@@ -6,6 +6,12 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "Ailleurs",
+    "title": "Ailleurs",
+    "img": "cover-images/ailleurs_cover",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "The+Becker+Collection",
     "title": "The Becker Collection",
     "img": "cover-images/CW-AL-WDC-ND_cover.jpg",
@@ -126,6 +132,12 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "James+M.+Linnehan+autobiography%2C+%5B194-%5D",
+    "title": "James M. Linnehan autobiography, [194-]",
+    "img": "cover-images/linnehan_cover.jpg",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "John+Donnelly+%26+Sons+records",
     "title": "John Donnelly & Sons records",
     "img": "cover-images/MS2012_004_cover.jpg",
@@ -183,6 +195,12 @@
     "facet_val": "William+Butler+Yeats+notebooks+and+manuscripts",
     "title": "William Butler Yeats notebooks and manuscripts",
     "img": "cover-images/MS1992_012_cover.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "XUL",
+    "title": "XUL",
+    "img": "cover-images/xul_cover.jpg",
     "layout": "portrait"
   }
 ]
