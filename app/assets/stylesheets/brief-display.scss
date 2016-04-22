@@ -10,3 +10,8 @@
 .show-tools {
   display: none;
 }
+
+/* No border on last document */
+#documents div:nth-last-of-type(2) {
+  border-bottom: none;
+}
