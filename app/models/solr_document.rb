@@ -33,7 +33,13 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   def viewer_url
-    _source['mods_identifier_type_uri_ms'][0]
+    if !_source['mods_location_url_access_raw_object_ms'].nil?
+      _source['mods_location_url_access_raw_object_ms'][0]
+    elsif !_source['mods_identifier_type_uri_ms'].nil?
+      _source['mods_identifier_type_uri_ms'][0]
+    else
+      ''
+    end
   end
 
   def has_finding_aid?
