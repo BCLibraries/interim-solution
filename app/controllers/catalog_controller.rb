@@ -110,6 +110,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'mods_physicalDescription_extent_ms', :label => 'Physical Description'
     config.add_index_field 'mods_relatedItem_type_host_collection_ms', :label => 'Collection'
     config.add_index_field 'mods_relatedItem_type_host_series_ms', :label => 'Series'
+    #config.add_index_field 'mods_relatedItem_type_host_findingAid_ms', :label => 'Finding Aid'
 
 
     # solr fields to be displayed in the show (single result) view
@@ -165,7 +166,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'mods_physicalDescription_extent_ms', :label => 'Physical Description'
     config.add_show_field 'mods_language_languageTerm_type_text_authority_iso639-2b_ms', :label => 'Language'
     config.add_show_field 'mods_identifier_ms', :label => 'Identifier'
-    #config.add_show_field 'mods_relatedItem_type_host_findingAid_ms', :label => 'Finding Aid'
+    config.add_show_field 'mods_relatedItem_type_host_findingAid_ms', :label => 'Finding Aid'
     config.add_show_field 'mods_accessCondition_type_use_and_reproduction_ms', :label => 'Use Restrictions'
     config.add_show_field 'mods_accessCondition_type_use_and_reproduction_displayLabel_Conditions_Governing_Use_note_ms', :label => 'Use Restrictions'
 
