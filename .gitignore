@@ -25,14 +25,20 @@
 
 # Ignore cover images except for default.
 /app/assets/images/cover-images/*.jpg
+/app/assets/images/cover-images/*.png
 !/app/assets/images/cover-images/default-cover-01.jpg
 
 # Ignore secrets
 /config/secrets.yml
 
-
 # Ignore precompiled assets
 /public/assets
 
+# Ignore shared folder
+/shared
+
 # Ignore RubyMine .idea folder
 .idea
+
+# Ignore nginx conf
+config/nginx.conf
