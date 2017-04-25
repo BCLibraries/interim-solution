@@ -182,10 +182,13 @@
      -->
      <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
        <analyzer>
+         <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-FoldToASCII.txt"/>
          <tokenizer class="solr.StandardTokenizerFactory"/>
          <filter class="solr.ICUFoldingFilterFactory" />
          <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
          <filter class="solr.SnowballPorterFilterFactory" language="English" />
+         <!-- See if this fixes searching on romaji diacritics -->
+         <filter class="solr.JapaneseReadingFormFilterFactory"/>
        </analyzer>
      </fieldType>
 
@@ -210,6 +213,7 @@
 	 also applies synonyms. -->
     <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
+	    <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-FoldToASCII.txt"/>
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
         <!-- in this example, we will only use synonyms at query time
@@ -218,6 +222,7 @@
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
       <analyzer type="query">
+	    <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-FoldToASCII.txt"/>
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" enablePositionIncrements="true" />
         <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
@@ -375,7 +380,7 @@
 
     <!-- This is an example of using the KeywordTokenizer along
          With various TokenFilterFactories to produce a sortable field
-         that does not include some properties of the source text
+  c       that does not include some properties of the source text
       -->
     <fieldType name="alphaOnlySort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
       <analyzer>
@@ -522,12 +527,13 @@
    <field name="subject_era_facet" type="string" indexed="true" stored="true" multiValued="true" />
    <field name="subject_geo_facet" type="string" indexed="true" stored="true" multiValued="true" /-->
    <!-- pub_date is used for facet and display so it must be indexed and stored -->
-   <!--field name="pub_date" type="string" indexed="true" stored="true" multiValued="true"/-->
+   <field name="pub_date" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="mods_originInfo_dateCreated_ms" type="string" indexed="true" stored="true" multiValued="false"/>
    <field name="mods_originInfo_dateIssued_ms" type="string" indexed="true" stored="true" multiValued="false"/> 
    <field name="mods_originInfo_dateOther_mss" type="string" indexed="true" stored="true" multiValued="false"/>
    <field name="mods_date_display_ms" type="string" indexed="true" stored="true" multiValued="false"/> 
-   <!-- pub_date sort uses new trie-based int fields, which are recommended for any int and are displayable, sortable, and range-quer
+
+  <!-- pub_date sort uses new trie-based int fields, which are recommended for any int and are displayable, sortable, and range-quer
    we use 'tint' for faster range-queries. -->
    <!--field name="pub_date_sort" type="tint" indexed="true" stored="true" multiValued="false"/-->
    <field name="mods_keydate_sort" type="tint" indexed="true" stored="true" multiValued="false"/>
@@ -538,7 +544,8 @@
 
    <field name="mods_relatedItem_type_host_displayForm_ms" type="string" indexed="true" stored="true"/>
    <field name="mods_physicalDescription_extent_ms" type="string" indexed="true" stored="true" multiValued="true"/>
-   
+   <field name="mods_relatedItem_type_host_collection_ms" type="text" indexed="true" stored="true"/>
+ 
 
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
         will be used if the name matches any of the patterns.
@@ -624,7 +631,7 @@
    <!-- MODS -->
    <copyField source="mods_titleInfo_usage_primary_title_mt" dest="title_unstem_search"/>
    <copyField source="mods_name_usage_primary_displayForm_aut_mt" dest="author_unstem_search"/> 
-   <copyField source="mods_name_usage_primary_displayForm_cre_mt" dest="author_unstem_search"/> 
+   <copyField source="mods_name_usage_primary_displayForm_cre_mt" dest="author_unstem_search"/>
    <copyField source="mods_name_usage_primary_displayForm_pht_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_crp_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_csl_mt" dest="author_unstem_search"/> 
@@ -640,7 +647,10 @@
    <copyField source="*_subject_name_displayForm_mt" dest="subject_unstem_search"/>
    <copyField source="*_subject_displayForm_mt" dest="subject_unstem_search"/>
    <copyField source="*_subject_authority_lcsh_name_displayForm_mt" dest="subject_unstem_search"/>
+   <copyField source="*_subject_authority_lcsh_displayForm_mt" dest="mods_subject_unstem_search"/>
+   <copyField source="*_subject_authority_gmgpc_displayForm_mt" dest="mods_subject_unstem_search"/>
    <copyField source="mods_subject_hierarchicalGeographic_displayForm_mt" dest="subject_unstem_search"/>
+   <copyField source="_subject_keyword_displayForm_mt" dest="subject_unstem_search"/>
 
  
    <!-- sort fields -->
@@ -694,18 +704,20 @@
   <copyField source="*_subject_displayForm_ms" dest="mods_subject_ms"/>
   <copyField source="*_subject_name_displayForm_ms" dest="mods_subject_ms"/>
   <copyField source="*_subject_authority_lcsh_name_displayForm_ms" dest="mods_subject_ms"/>
+  <copyField source="*_subject_authority_lcsh_displayForm_ms" dest="mods_subject_ms"/>
+  <copyField source="*_subject_authority_gmgpc_displayForm_ms" dest="mods_subject_ms"/>
+
 
 
   <copyField source="mods_identifier_type_local-other_ms" dest="mods_identifier_ms"/>
   <copyField source="mods_identifier_type_local-accession_ms" dest="mods_identifier_ms"/>
   
-
    <!-- Above, multiple source fields are copied to the [text] field. 
 	  Another way to map multiple source fields to the same 
 	  destination field is to use the dynamic field syntax. 
 	  copyField also supports a maxChars to copy setting.  -->
 	   
-   <copyField source="*_mt" dest="text" maxChars="3000"/>
+   <!-- <copyField source="*_mt" dest="text" maxChars="3000"/> -->
 
    <!-- copy name to alphaNameSort, a field designed for sorting by name -->
    <!-- <copyField source="name" dest="alphaNameSort"/> -->
