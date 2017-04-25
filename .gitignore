@@ -41,4 +41,4 @@
 .idea
 
 # Ignore nginx conf
-config/nginx.conf
+/config/nginx.conf
