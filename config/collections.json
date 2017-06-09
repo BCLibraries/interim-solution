@@ -126,6 +126,12 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "Irish+prose+and+poetry",
+    "title": "Irish prose and poetry",
+    "img": "cover-images/MS1986_085_007_cover.jpg",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "James+Jeffrey+Roche+letters",
     "title": "James Jeffrey Roche letters",
     "img": "cover-images/MS1986-041_cover.jpg",
@@ -168,6 +174,12 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "Mary+Johanna+Rhodes+Wild+diary",
+    "title": "Mary Johanna Rhodes Wild diary",
+    "img": "cover-images/MS2013_016_cover.jpg",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "Michael+H.+Leary+letters",
     "title": "Michael H. Leary letters",
     "img": "cover-images/MS1986-043_cover.jpg",
@@ -190,6 +202,11 @@
     "title": "Thomas D. Craven papers",
     "img": "cover-images/BC2004_121_cover.jpg",
     "layout": "portrait"
+  },
+  {
+    "facet_val": "Thomas+Henry+Lyon+papers",
+    "title": "Thomas Henry Lyon papers",
+    "img": "cover-images/MS1986_118_cover.jpg"
   },
   {
     "facet_val": "Thomas+P.+O%27Neill%2C+Jr.+Photographs",
