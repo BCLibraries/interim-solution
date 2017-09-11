@@ -633,6 +633,7 @@
    <copyField source="mods_name_usage_primary_displayForm_aut_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_usage_primary_displayForm_cre_mt" dest="author_unstem_search"/>
    <copyField source="mods_name_usage_primary_displayForm_pht_mt" dest="author_unstem_search"/> 
+   <copyField source="mods_name_displayForm_cre_mt" dest="author_unstem_search"/>
    <copyField source="mods_name_displayForm_crp_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_csl_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_ctb_mt" dest="author_unstem_search"/> 
@@ -643,6 +644,7 @@
    <copyField source="mods_name_displayForm_own_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_prf_mt" dest="author_unstem_search"/> 
    <copyField source="mods_name_displayForm_rps_mt" dest="author_unstem_search"/> 
+   <copyField source="mods_name_displayForm_scr_mt" dest="author_unstem_search"/>
    <copyField source="mods_name_displayForm_trc_mt" dest="author_unstem_search"/> 
    <copyField source="*_subject_name_displayForm_mt" dest="subject_unstem_search"/>
    <copyField source="*_subject_displayForm_mt" dest="subject_unstem_search"/>
