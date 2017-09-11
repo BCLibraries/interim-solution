@@ -186,6 +186,12 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "Reeves+family+diaries",
+    "title": "Reeves family diaries",
+    "img": "cover-images/reeves_thumbnail.jpg",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "Robert+Bellarmine+letter%2C+1598+February+5",
     "title": "Robert Bellarmine letter, 1598 February 5",
     "img": "cover-images/MS1989_015_cover.jpg",
@@ -202,11 +208,12 @@
     "title": "Thomas D. Craven papers",
     "img": "cover-images/BC2004_121_cover.jpg",
     "layout": "portrait"
-  },
+},
   {
     "facet_val": "Thomas+Henry+Lyon+papers",
     "title": "Thomas Henry Lyon papers",
-    "img": "cover-images/MS1986_118_cover.jpg"
+    "img": "cover-images/MS1986_118_cover.jpg",
+    "layout": "portrait"
   },
   {
     "facet_val": "Thomas+P.+O%27Neill%2C+Jr.+Photographs",
