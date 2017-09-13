@@ -30,6 +30,8 @@
 
 # Ignore secrets
 /config/secrets.yml
+/config/initializers/blacklight_initializer.rb
+/config/initializers/devise.rb
 
 # Ignore precompiled assets
 /public/assets
