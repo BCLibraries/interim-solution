@@ -88,6 +88,7 @@
 
        <str name="qf">
          title_unstem_search^100000
+         collection_unstem_search^75000
          subtitle_unstem_search^50000
          title_t^25000
          subtitle_t^10000

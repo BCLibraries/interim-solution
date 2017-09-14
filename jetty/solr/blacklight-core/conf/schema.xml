@@ -544,7 +544,7 @@
 
    <field name="mods_relatedItem_type_host_displayForm_ms" type="string" indexed="true" stored="true"/>
    <field name="mods_physicalDescription_extent_ms" type="string" indexed="true" stored="true" multiValued="true"/>
-   <field name="mods_relatedItem_type_host_collection_ms" type="text" indexed="true" stored="true"/>
+   <field name="mods_relatedItem_type_host_collection_ms" type="string" indexed="true" stored="true"/>
  
 
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
@@ -653,7 +653,7 @@
    <copyField source="*_subject_authority_gmgpc_displayForm_mt" dest="mods_subject_unstem_search"/>
    <copyField source="mods_subject_hierarchicalGeographic_displayForm_mt" dest="subject_unstem_search"/>
    <copyField source="_subject_keyword_displayForm_mt" dest="subject_unstem_search"/>
-
+   <copyField source="mods_relatedItem_type_host_collection_ms" dest="collection_unstem_search"/>
  
    <!-- sort fields -->
    <copyField source="mods_originInfo_dateCreated_ms" dest="mods_date_display_ms"/>
