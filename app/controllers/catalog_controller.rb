@@ -67,7 +67,7 @@ class CatalogController < ApplicationController
     # facet bar
     config.add_facet_field 'mods_relatedItem_type_host_collectionFacet_ms', :label => 'Collection/Series', limit: 10
     config.add_facet_field 'mods_relatedItem_type_host_collection_ms', :label => 'Collection/Series', :show => false
-#config.add_facet_field 'a_pivot_facet', pivot: ['mods_relatedItem_type_host_series_displayForm_ms', 'mods_relatedItem_type_host_series_ms']
+    #config.add_facet_field 'a_pivot_facet', pivot: ['mods_relatedItem_type_host_series_displayForm_ms', 'mods_relatedItem_type_host_series_ms']
 
 
     config.add_facet_field 'mods_format_normalized_ms', :label => 'Format', limit: 7
@@ -114,6 +114,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'mods_physicalDescription_extent_ms', :label => 'Physical Description'
     config.add_index_field 'mods_relatedItem_type_host_collectionFacet_ms', :label => 'Collection'
     config.add_index_field 'mods_relatedItem_type_host_series_ms', :label => 'Series'
+    config.add_index_field 'mods_relatedItem_type_host_partOf_ms', :label => 'Subseries'
     #config.add_index_field 'mods_relatedItem_type_host_findingAid_ms', :label => 'Finding Aid'
 
 
@@ -162,7 +163,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'mods_genre_normalized_ms', :label => 'Genre'
     config.add_show_field 'mods_relatedItem_type_host_collectionFacet_ms', :label => 'Collection', :link_to_search => 'mods_relatedItem_type_host_collectionFacet_ms'
     config.add_show_field 'mods_relatedItem_type_host_series_ms', :label => 'Series', :link_to_search => 'mods_relatedItem_type_host_series_ms'
-    config.add_show_field 'mods_relatedItem_type_host_partOf_ms', :label => 'Subseries'
+    config.add_show_field 'mods_relatedItem_type_host_partOf_ms', :label => 'Subseries', :link_to_search => 'mods_relatedItem_type_host_partOf_ms'
     config.add_show_field 'mods_subject_ms', :label => 'Subject', :link_to_search => 'mods_subject_ms'
     config.add_show_field 'mods_places_ms', :label => 'Place', :link_to_search => 'mods_places_ms'
     config.add_show_field 'mods_subject_keyword_displayForm_ms', :label => 'Keywords', :link_to_search => 'mods_subject_keyword_displayForm_ms'
@@ -260,5 +261,4 @@ CatalogController.blacklight_config.show.document_actions.delete(:sms)
   def has_user_authentication_provider?
     false
   end
-
 end
