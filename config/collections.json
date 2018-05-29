@@ -132,9 +132,21 @@
     "layout": "portrait"
   },
   {
+    "facet_val": "Fred+Wilton+Russell+diary",
+    "title": "Fred Wilton Russell diary",
+    "img": "cover-images/MS2013_042_ref8_cover.jpg",
+    "layout": "portrait"
+  },
+  {
     "facet_val": "Franciscan+antiphoner+%28sanctorale%29+with+sequences%2C+circa+1300-1350",
     "title": "Franciscan antiphoner sanctorale with sequences circa 1300-1350",
     "img": "cover-images/MS1996_097_cover.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "Illumination+of+the+Crucifixion+from+a+Missal+%3A+use+of+Troyes",
+    "title": "Illumination of the Crucifixion from a Missal : use of Troyes",
+    "img": "cover-images/MS1986_044_62796_cover.jpg",
     "layout": "portrait"
   },
   {
@@ -225,6 +237,12 @@
     "facet_val": "Thomas+Henry+Lyon+papers",
     "title": "Thomas Henry Lyon papers",
     "img": "cover-images/MS1986_118_cover.jpg",
+    "layout": "portrait"
+  },
+  {
+    "facet_val": "Thomas+Murray+family+papers",
+    "title": "Thomas Murray family papers",
+    "img": "cover-images/MS2000_017_81378_cover.jpg",
     "layout": "portrait"
   },
   {
